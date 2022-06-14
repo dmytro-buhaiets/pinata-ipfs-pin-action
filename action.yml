@@ -1,0 +1,28 @@
+name: 'Pinata IPFS pin'
+description: 'Pin file or directory to IPFS using Pinata provider'
+
+branding:
+  icon: 'file'
+  color: 'purple'
+
+inputs:
+  api-key:
+    description: 'Pinata API key'
+    required: true
+  api-secret:
+    description: 'Pinata API secret'
+    required: true
+  name:
+    description: 'Pin name'
+    required: true
+  path:
+    description: 'File or directory to pin'
+    required: true
+
+outputs:
+  cid:
+    description: 'Content identifier'
+
+runs:
+  using: 'node16'
+  main: 'index.mjs'
